@@ -6,10 +6,15 @@ import os
 
 paConfig = ''
 openConfig = []
+paConfig = []
 
 try:
     configTxt = open('config.txt', 'r')
-    paConfig = configTxt.readlines()
+    rawPaConfig = configTxt.readlines()
+    for i in rawPaConfig:
+        i = i.replace('\n', '')
+        i = i.replace(' ', '')
+        paConfig.append(i)
     configTxt.close()
 
     openTxt = open('open.txt', 'r')
@@ -86,15 +91,20 @@ while(True):
             if inp.startswith('open'):
                 inp = inp.replace('open ', '')
                 repeats = 0
+                inpExists = False
 
                 for i in openConfig:
                     repeats += 1
                     if inp in i:
-                        
+                        inpExists = True
                         inp2 = openConfig[repeats-1]
 
-                speakText('opening {}'.format(inp))
-                inp2 = inp2.replace('{}='.format(inp), '')
+                if inpExists:
+                    speakText('opening {}'.format(inp))
+                    inp2 = inp2.replace('{}='.format(inp), '')
 
-                os.system(inp2)
+                    os.system(inp2)
+
+                else:
+                    speakText('could not find {} in open txt'.format(inp))
                 
