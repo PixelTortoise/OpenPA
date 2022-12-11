@@ -4,6 +4,7 @@ An open source and customizable personal assistant for your computer
 
 # How to install
 This program relies on a few third party python packages you need to install, and [Python](https://www.python.org/downloads/)
+
 Commands to install required packages
 
 `pip install speechrecognition`
