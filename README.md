@@ -23,5 +23,8 @@ name=(name)
 ## open.txt holds names of programs, and paths to there executable
 
 Syntax is as followed, use as many lines as you can
-
+```
 (programname)=(programpath)
+(programname)=(programpath)
+(programname)=(programpath)
+```
