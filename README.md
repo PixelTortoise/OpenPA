@@ -1,4 +1,4 @@
-![logo](\main\openpa.png)
+![logo](openpa\openpa.png)
 # OpenPA
 An open source and customizable personal assistant for your computer
 
