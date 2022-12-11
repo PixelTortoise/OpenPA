@@ -16,10 +16,9 @@ There will eventually be a wiki on this if I continue with this project, but as 
 ## config.txt is only used for the name of your program, for example if it was named Jarvis, you would say "Jarvis open google" to open google
 
 Syntax is as followed, do not put a space or newline in front of it
-
+```
 name=(name)
-
-
+```
 ## open.txt holds names of programs, and paths to there executable
 
 Syntax is as followed, use as many lines as you can
